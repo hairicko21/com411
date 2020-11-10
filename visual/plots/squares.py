@@ -17,8 +17,11 @@ def large():
   y = [1,1,6,6,1]
   plt.plot(x, y, 'bp-')
 
+def run():
 
-small()
-medium()
-large()
-plt.show()
+  small()
+  medium()
+  large()
+  plt.show()
+
+run()
