@@ -11,7 +11,7 @@ def animate(frame):
 
 def run():
   global fig
-  simple_animation = animation.funcanimation(fig, animate, frames = 10, interval = 1000)
+  simple_animation=animation.FuncAnimation(fig,animate,frames=10,interval=100)
   plt.show()
   # your code here
 
