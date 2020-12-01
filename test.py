@@ -1,32 +1,25 @@
-def gang():
-    print("Loading gang...")
-    
-    friends = []
-    friends.append("Scooby Doo")
-    friends.append("Shaggy Rogers")
-    friends.append("Fred Jones")
-    friends.append("Daphne Blake")
-    friends.append("Velma Dinkley")
-    print(friends)
-    print('...Done!')
-    return friends
+import matplotlib.pyplot as plt 
 
-def phrases(friends):
-    
-    quotes = {}
-    for friend in friends:
-        print('What does {} say?'.format(friend))
-        response = input()
-        quote = response
-        quotes['friend'] = quote
-    return quotes
+def combined():
+  x = [3, 5, 7, 3]
+  y = [3, 5, 3, 3]
 
-def save(quotes):
-    with open(quotes.txt, 'w') as file:
-        for item in quotes:
-            file.write(f'{item[0]}: {quotes[1]}')
+  plt.plot(x, y, 'ro--')
+  
+  x1 = [3, 5, 7, 3]
+  y1 = [5, 3, 5, 5]
 
-save(quotes) 
-print("The file contains...")
-file = open("quotes.txt")
-print(file.read())
+  plt.plot(x1, y1, 'sb:')
+  
+  x2 = [3, 3, 7, 3]
+  y2 = [3, 5, 4, 3]
+  plt.plot(x2, y2, 'g*-.')
+
+  x3 = [7, 7, 3, 7]
+  y3 = [3, 5, 4, 3]
+  plt.plot(x3, y3, 'yp-')
+  plt.show()
+
+def separated()
+
+combined()
