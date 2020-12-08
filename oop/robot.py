@@ -1,4 +1,5 @@
-class Robot:
+from inhabitant import Inhabitant
+class Robot(Inhabitant):
   MAX_ENERGY = 100
 
   # A class attribute
@@ -9,7 +10,7 @@ class Robot:
     print(Robot.laws)
 
   # An initialiser (special instance method)
-  def __init__(self, name = "Robot", age=0, energy=0):
+  def __init__(self, name = "Robot", age=0, energy=MAX_ENERGY):
 
     # An instance attribute
     self.name = name
@@ -22,29 +23,6 @@ class Robot:
 
   def __str__(self):
     return f'My name is {self.name} and I am {self.age} years old. And my energy is {self.energy}'
-  
-  #instance methods
-  def grow(self):
-    self.age += 1
-
-  def eat(self, amount):
-    if (self.energy + amount > Robot.MAX_ENERGY):
-      self.energy = Robot.MAX_ENERGY
-    else:
-      self.energy += amount
-
-    return amount
-  
-  def move(self, distance):
-    potential_energy = self.energy - distance
-    if (potential_energy < 0):
-      self.energy = 0
-      return self.energy - abs(potential_energy)
-    else:
-      self.energy = potential_energy
-      return 0
-    return distance
-
 
   # An instance method
   def display(self):
@@ -52,9 +30,11 @@ class Robot:
 
 
 if (__name__ == "__main__"):
-  robot = Robot("Beep", 3, 60)
-  robot.eat(45)
-  robot.move(34)
-  robot.display()
-  Robot.the_laws()
+  # create an object of type Human
+  robot = Robot()
+
+  # display the current state of the object
   print(repr(robot))
+
+  # invoke the method move on the object
+  robot.move(10)
