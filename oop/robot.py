@@ -11,11 +11,7 @@ class Robot(Inhabitant):
 
   # An initialiser (special instance method)
   def __init__(self, name = "Robot", age=0, energy=MAX_ENERGY):
-
-    # An instance attribute
-    self.name = name
-    self.age = age
-    self.energy = energy
+    super().__init__(name, age)
  
  #magic methods
   def __repr__(self):
